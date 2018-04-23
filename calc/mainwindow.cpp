@@ -44,7 +44,10 @@ void MainWindow::Math(int num) //обрабока запросов
             lastnumb=lastnumb*currnumb;
         break;
     case 13:
+        if (currnumb!=0)
+        {
             lastnumb=lastnumb/currnumb;
+        }
         break;
     default:
         abort();
@@ -148,7 +151,6 @@ void MainWindow::slotLogik(int oper) //обработка поступающих
    ui->lcdNumber->display(0);
    ui->lineEdit->setText(hist);
    currnumb=0;
-
 }
 
 void MainWindow::slotEqul() //Выполнение расчетов
